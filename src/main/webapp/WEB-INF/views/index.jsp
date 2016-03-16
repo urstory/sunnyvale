@@ -485,7 +485,6 @@
 		<!-- contacts -->
 		<section class="section contacts" id="contacts">
 			<div class="container">
-				<h2 class="heading">CONTACTS</h2>
 				<div class="row contact-address">
 					<div class="col-md-12" style="margin-top: 50px;">
 						<p class="address-lines-tit"><spring:message code="contact-Come-Visit" /></p>
