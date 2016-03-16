@@ -366,6 +366,7 @@
 	</dependencies>
 
 
+	<!--
 	<repositories>
  		<repository>
 			<id>SunnyvaleNexus</id>
@@ -373,7 +374,7 @@
 			<url>http://www.sunnyvale.co.kr/nexus/content/groups/public</url>
 		</repository>		
 	</repositories>
-
+	-->
 
 	<build>
 		<plugins>
