@@ -486,9 +486,6 @@
 		<section class="section contacts" id="contacts">
 			<div class="container">
 				<h2 class="heading">CONTACTS</h2>
-				<div class="row text-center">
-					<img src="/assets/img/map.png">
-				</div>
 				<div class="row contact-address">
 					<div class="col-md-12" style="margin-top: 50px;">
 						<p class="address-lines-tit"><spring:message code="contact-Come-Visit" /></p>
@@ -498,7 +495,6 @@
 							<p>&nbsp;</p>
 							<p><spring:message code="contact-transportation" /></p>
 							<p><spring:message code="contact-subway" /></p>
-							<p><spring:message code="contact-bus" /></p>
 							<p>Email : <a href="email:support@sunnyvale.co.kr">support@sunnyvale.co.kr</a></p>
 						</div>
 						<!--
