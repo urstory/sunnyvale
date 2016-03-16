@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
+
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<!-- Appenders -->
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm}] %5p [%C{1}(%M:%L)] :%m%n"/>
+        </layout>
+    </appender>	
+	
+    <appender name="file" class="org.apache.log4j.FileAppender">
+        <param name="File" value="/var/log/webapps/redwood.log" />
+        <param name="Append" value="true" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm}] %5p [%C{1}(%M:%L)] :%m%n"/>
+        </layout>
+    </appender>
+    
+   <appender name="file-daily" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="file" value="/var/log/webapps/redwood.log"/>
+        <param name="Append" value="true"/>
+        <param name="DatePattern" value="'.'yyyy-MM-dd"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %-5p [%t] %-17c{2} (%13F:%L) %3x - %m%n"/>
+        </layout>
+    </appender>    
+	
+	<!-- Application Loggers -->
+	<logger name="kr.co.sunnyvale.redwood">
+		<level value="info" />
+	</logger>
+	
+	<!-- 3rdparty Loggers -->
+	<logger name="org.springframework">
+		<level value="info" />
+	</logger>
+
+	<logger name="org.springframework.security">
+		<level value="all" />
+	</logger>
+
+	<logger name="org.hibernate">
+		<level value="info" />
+	</logger>
+
+	<logger name="net.sf.cglib">
+		<level value="info" />
+	</logger>
+	
+	<logger name="net.sf.ehcache">
+		<level value="info" />
+	</logger>	
+
+	<logger name="org.aspectj">
+		<level value="info" />
+	</logger>
+	
+	<logger name="com.googlecode.ehcache">
+		<level value="info" />
+	</logger>
+	
+	
+	<!-- Root Logger -->
+	<root>
+		<priority value="all" />
+		<appender-ref ref="console" />
+		<!--appender-ref ref="file-daily" /-->
+	</root>
+	
+</log4j:configuration>

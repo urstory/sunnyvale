@@ -1,0 +1,24 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #4a4a4a;
+}
+
+.mon-align-tw {
+text-align: right;
+display: table-cell;
+width: 83px;
+padding-right: 5px;
+}
+
+.projects-figcaption {
+	margin-top:15px;
+}
+
+.project-grid figure .project-item-info .sub-heading {
+	font-size:0.9em;
+}
+
+.project-effect-shrink figure .project-item-info a {
+	font-size:0.7em;
+}
