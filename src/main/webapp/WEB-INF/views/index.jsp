@@ -12,7 +12,7 @@
 	<title>써니베일 - 사람과 사람, 써니베일</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	<meta name="description" content="기업,단체,모임을 위한 SNS솔루션 제작및 직접 서비스, IT전문교육(자바,분석,설계,방법론,프레임워크 등)">
+	<meta name="description" content="IT 교육 전문">
 	<meta name="author" content="The Develovers">
 
 	
@@ -104,20 +104,12 @@
 				</p>					
 					
 				<div class="row interest">
-					<div class="col-md-6">
+					<div class="col-md-12">
 						<h3 class="sub-heading"><span class="glyphicon icon-book"></span>for Education </h3>
 						<p style="font-size:15px"><spring:message code="about-adu-01" /></p>
 						<br>
 						<p><spring:message code="about-adu-02" /></p>
 					</div>
-
-					<div class="col-md-6">
-						<h3 class="sub-heading"><span class="glyphicon icon-sitemap"></span>for Business </h3>
-						<p style="font-size:15px"><spring:message code="about.biz-01" />
-						</p>
-						<br>
-						<%-- <p><spring:message code="about.biz-02" /> </p>--%>
-					</div>					
 				</div>
 				
 			</div>
@@ -129,6 +121,41 @@
 			<div class="container">
 				<h2 class="heading">RESUME</h2>
 				<ul class="timeline">
+					<li class="year">2017</li>
+					<li class="event">
+						<h3 class="heading">IT교육 및 서비스 개발</h3>
+						<span class="month"><i class="icon icon-calendar"></i>2017년</span>
+
+						<p>
+							<span class="mon-align-tw"></span>
+							<span class="mon-content">
+								재단법인 커넥트(connect.or.k)<br> 백엔드 프로그래밍 메인 튜터 활동
+							</span>
+						</p>
+					</li>
+					<li class="event" style="display:none;">
+					</li>
+
+					<li class="year">2016</li>
+					<li class="event">
+						<h3 class="heading">IT교육 및 서비스 개발</h3>
+						<span class="month"><i class="icon icon-calendar"></i>2016년</span>
+						<p>
+							<span class="mon-align-tw"></span>
+							<span class="mon-content">
+								비트 교육센터 전문가 반 교육<br>
+								비트 교육센터 개발자 교육<br>
+							</span>
+						</p>
+						<p>
+							<span class="mon-align-tw"></span>
+							<span class="mon-content">
+								http://www.tryhelloworld.co.kr<br>자바 온라인 교육
+							</span>
+						</p>
+					</li>
+					<li class="event" style="display:none;">
+					</li>
 					<li class="year">2015</li>
 					<li class="event">
 						<h3 class="heading">IT교육 및 서비스 개발</h3>
@@ -444,40 +471,13 @@
 		<!-- projects -->
 		<section class="section projects" id="projects">
 			<div class="container">
-				<h2 class="heading">PROJECTS</h2>
-				<h3>클래스 있는 사람들을 위한, "GoClass"</h3>
-				<p>써니베일은 IT교육현장에서 강사와 교육생들간에 쉽게 소통할 수 있도록 도와주는 goClass를 제작 내부적으로 운영하고 있습니다. 관심 있는 분은 연락 주세요.</p>
+				<h2 class="heading">교육</h2>
+				<h3>신입 사원 전문 IT 교육</h3>
+				<p>다양한 기업의 신입사원 IT교육 노하우가 있습니다. 언제든 연락주세요.</p>
 				<p>&nbsp;</p>
-				<h3>기업용 커뮤니티 서비스, "HelloMyOffice"</h3>
+				<h3>기업 IT 교육</h3>
 				<p>&nbsp;</p>
-				<p>써니베일은 기업 내부에서 업무와 커뮤니티를 위해 사용하는 HelloMyOffice를 제작. 판매하고 있습니다. 관심 있는 분은 연락주세요.</p>
-				<div class="row project-list">
-					<ul class="project-grid project-effect-shrink">
-						<li class="col-md-6">
-							<figure>
-								<img src="assets/img/projects/goclass_.png" alt="Tiick Tock Coming Soon Page"/>
-								<figcaption class="projects-figcaption">
-									<div class="project-item-info">
-										<h3 class="sub-heading"><spring:message code="projects.item.yacamp.title" /></h3>
-										<p><spring:message code="projects.item.yacamp.content" /> </p>
-									</div>
-								</figcaption>
-							</figure>
-						</li>
-						<li class="col-md-6">
-							<figure>
-								<img src="assets/img/projects/sunny-page.png" alt="Big Thing Landing Page"/>
-								<figcaption class="projects-figcaption">
-									<div class="project-item-info">
-										<h3 class="sub-heading"><spring:message code="projects.item.sunny.title" /></h3>
-										<p><spring:message code="projects.item.sunny.content" /></p>
-									</div>
-								</figcaption>
-							</figure>
-						</li>
-
-					</ul>
-				</div>
+				<p>자바 기본, 데이터베이스, Spring, UML, 분석/설계 등 다양한 기업 IT교육 경험이 있습니다. 언제든 연락주세요.</p>
 			</div>
 		</section>
 		<!-- end projects -->
@@ -489,12 +489,7 @@
 					<div class="col-md-12" style="margin-top: 50px;">
 						<p class="address-lines-tit"><spring:message code="contact-Come-Visit" /></p>
 						<div class="address-lines">
-							<p><spring:message code="contact-address" /></p>
-							<p><spring:message code="contact-number" /> </p>
-							<p>&nbsp;</p>
-							<p><spring:message code="contact-transportation" /></p>
-							<p><spring:message code="contact-subway" /></p>
-							<p>Email : <a href="email:support@sunnyvale.co.kr">support@sunnyvale.co.kr</a></p>
+							<p>Email : carami at nate.com</p>
 						</div>
 						<!--
 						<div class="social">
