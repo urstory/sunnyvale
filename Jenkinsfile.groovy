@@ -11,15 +11,52 @@ node('', {
     })
 
     stage("Parameter Check", {
-        println " BUILD_USER = " + BUILD_USER
-        println " CONFIG_NAME = $CONFIG_NAME"
-        println "  REMOTE_PATH = $REMOTE_PATH"
-        println "  TARGET_USER = $TARGET_USER"
-        println "  TARGET_SERVER = $TARGET_SERVER"
-        println "  GIT_URL = $GIT_URL"
-        println "  BRANCH_SELECTOR = $BRANCH_SELECTOR"
-        println "  GRADLE_VERSION = $GRADLE_VERSION"
-        println "  JAVA_VERSION = $JAVA_VERSION"
+        try {
+            println " BUILD_USER = " + $BUILD_USER
+        }catch(Exception ex){
+
+        }
+        try {
+            println " CONFIG_NAME = $CONFIG_NAME"
+        }catch(Exception ex){
+
+        }
+        try {
+            println "  REMOTE_PATH = $REMOTE_PATH"
+        }catch(Exception ex){
+
+        }
+        try {
+            println "  TARGET_USER = $TARGET_USER"
+        }catch(Exception ex){
+
+        }
+        try {
+            println "  TARGET_SERVER = $TARGET_SERVER"
+        }catch(Exception ex){
+
+        }
+        try {
+            println "  GIT_URL = $GIT_URL"
+        }catch(Exception ex){
+
+        }
+        try {
+            println "  BRANCH_SELECTOR = $BRANCH_SELECTOR"
+        }catch(Exception ex){
+
+        }
+        try {
+            println "  GRADLE_VERSION = $GRADLE_VERSION"
+        }catch(Exception ex){
+
+        }
+        try {
+            println "  JAVA_VERSION = $JAVA_VERSION"
+        }catch(Exception ex){
+
+        }
+
 
         env.JAVA_HOME="${tool name : JAVA_VERSION}"
         env.PATH="${env.JAVA_HOME}/bin:${env.PATH}"
