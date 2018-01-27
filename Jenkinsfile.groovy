@@ -6,14 +6,6 @@ def useNode = true
 def useSlack = true
 
 node('', {
-    // install Maven and add it to the path
-    env.PATH = "${tool 'M3'}/bin:${env.PATH}"
-
-    configFileProvider(
-            [configFile(fileId: 'my-maven-settings', variable: 'MAVEN_SETTINGS')]) {
-        sh 'mvn -s $MAVEN_SETTINGS clean package'
-    }
-
     stage('example1', {
         echo "hello 1"
     })
