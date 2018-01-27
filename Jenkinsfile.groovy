@@ -99,13 +99,15 @@ node('', {
     })
 
     withMaven(
-            mavenLocalRepo: "/root/.m2/repository" ){
+            mavenLocalRepo: "/root/.m2/repository" ) {
         stage('Package') {
             sh 'mvn -DskipStatic -DskipTests clean package'
         }
-        stage('deploy'){
+    }
+
+    stage('deploy'){
+        if (useBuild) {
             sh 'cp /root/.jenkins/workspace/sunnyvale_home_pipeline/target/sunnyvale-1.0.0-BUILD-SNAPSHOT.war /apps/deploy/sunnyvale/webapps:/opt/tomcat/webapps/ROOT.war'
         }
-
     }
 })
