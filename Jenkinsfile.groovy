@@ -62,7 +62,7 @@ node('', {
             env.JAVA_HOME = "${tool name: JAVA_VERSION}"
             env.PATH = "${env.JAVA_HOME}/bin:${env.PATH}"
         }catch(Exception ex){
-            
+
         }
 
         try {
@@ -85,11 +85,11 @@ node('', {
             checkout(
                     [
                             $class                           : 'GitSCM',
-                            branches                         : [[name: '${BRANCH_SELECTOR}']],
+                            branches: [[name: '*/master']],
                             doGenerateSubmoduleConfigurations: false,
                             extensions                       : [],
                             submoduleCfg                     : [],
-                            userRemoteConfigs                : [[url: '${GIT_URL']]
+                            userRemoteConfigs                : [[url: 'https://github.com/urstory/sunnyvale.git']]
                     ]
             )
             println "Git CheckOut End"
