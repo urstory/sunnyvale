@@ -58,8 +58,12 @@ node('', {
         }
 
 
-        env.JAVA_HOME="${tool name : JAVA_VERSION}"
-        env.PATH="${env.JAVA_HOME}/bin:${env.PATH}"
+        try {
+            env.JAVA_HOME = "${tool name: JAVA_VERSION}"
+            env.PATH = "${env.JAVA_HOME}/bin:${env.PATH}"
+        }catch(Exception ex){
+            
+        }
 
         try {
             println "  SLACK_TOKEN = $SLACK_TOKEN"
