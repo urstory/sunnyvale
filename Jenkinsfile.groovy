@@ -103,11 +103,9 @@ node('', {
         stage('Package') {
             sh 'mvn -DskipStatic -DskipTests clean package'
         }
-    }
-})
+        stage('deploy'){
+            sh 'cp /root/.jenkins/workspace/sunnyvale_home_pipeline/target/sunnyvale-1.0.0-BUILD-SNAPSHOT.war /apps/deploy/sunnyvale/webapps:/opt/tomcat/webapps/ROOT.war'
+        }
 
-node('', {
-    stage('test stage', {
-        echo "test stage"
-    })
+    }
 })
