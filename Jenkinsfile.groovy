@@ -99,7 +99,7 @@ node('', {
     })
 })
 
-node('second_node', {
+node('', {
     stage('test stage', {
         echo "test stage"
     })
