@@ -99,7 +99,7 @@ node('', {
     })
 
     withMaven(
-            mavenLocalRepo: ".repository" ){
+            mavenLocalRepo: "/root/.m2/repository" ){
         stage('Package') {
             sh 'mvn -DskipStatic -DskipTests clean package'
         }
