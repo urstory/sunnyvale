@@ -107,7 +107,7 @@ node('', {
 
     stage('deploy'){
         if (useBuild) {
-            sh 'cp /root/.jenkins/workspace/sunnyvale_home_pipeline/target/sunnyvale-1.0.0-BUILD-SNAPSHOT.war /apps/deploy/sunnyvale/webapps:/opt/tomcat/webapps/ROOT.war'
+            sh 'cp /root/.jenkins/workspace/sunnyvale_home_pipeline/target/sunnyvale-1.0.0-BUILD-SNAPSHOT.war /apps/deploy/sunnyvale/webapps/ROOT.war'
         }
     }
 })
