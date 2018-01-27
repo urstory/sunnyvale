@@ -109,7 +109,7 @@ node('', {
                     mavenLocalRepo: '/opt/maven') {
 
                 // Run the maven build
-                sh "mvn package -Dmaven.test.skip=true"
+                sh "mvn package -Dmaven.test.skip=true -s /opt/apache-maven-3.2.2/conf/settings.xml"
 
             }
         }
