@@ -6,6 +6,14 @@ def useNode = true
 def useSlack = true
 
 node('', {
+    // install Maven and add it to the path
+    env.PATH = "${tool 'M3'}/bin:${env.PATH}"
+
+    configFileProvider(
+            [configFile(fileId: 'my-maven-settings', variable: 'MAVEN_SETTINGS')]) {
+        sh 'mvn -s $MAVEN_SETTINGS clean package'
+    }
+
     stage('example1', {
         echo "hello 1"
     })
@@ -98,22 +106,12 @@ node('', {
         }
     })
 
-    stage("build",{
-        if(useBuild){
-            withMaven(
-                    // Maven installation declared in the Jenkins "Global Tool Configuration"
-                    maven: 'M3',
-                    // Maven settings.xml file defined with the Jenkins Config File Provider Plugin
-                    // Maven settings and global settings can also be defined in Jenkins Global Tools Configuration
-                    mavenSettingsConfig: 'my-maven-settings',
-                    mavenLocalRepo: '/opt/maven') {
-
-                // Run the maven build
-                sh "mvn package -Dmaven.test.skip=true -s settings.xml"
-
-            }
+    withMaven(
+            jdk: "jdk8", maven: "m3.5", mavenLocalRepo: ".repository" ){
+        stage('Package') {
+            sh 'mvn -DskipStatic -DskipTests clean package'
         }
-    })
+    }
 })
 
 node('', {
