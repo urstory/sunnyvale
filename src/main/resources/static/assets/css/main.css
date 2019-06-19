@@ -202,95 +202,6 @@ table {
   border-spacing: 0;
 }
 
-@media print {
-  * {
-    color: #000 !important;
-    text-shadow: none !important;
-    background: transparent !important;
-    box-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-
-  .ir a:after,
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
-    content: "";
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  thead {
-    display: table-header-group;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  img {
-    max-width: 100% !important;
-  }
-
-  @page {
-    margin: 2cm .5cm;
-}
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-
-  .navbar {
-    display: none;
-  }
-
-  .table td,
-  .table th {
-    background-color: #fff !important;
-  }
-
-  .btn > .caret,
-  .dropup > .btn > .caret {
-    border-top-color: #000 !important;
-  }
-
-  .label {
-    border: 1px solid #000;
-  }
-
-  .table {
-    border-collapse: collapse !important;
-  }
-
-  .table-bordered th,
-  .table-bordered td {
-    border: 1px solid #ddd !important;
-  }
-}
 *,
 *:before,
 *:after {
@@ -733,10 +644,6 @@ pre {
   background-color: #f5f5f5;
   border: 1px solid #cccccc;
   border-radius: 4px;
-}
-
-pre.prettyprint {
-  margin-bottom: 20px;
 }
 
 pre code {
@@ -2744,10 +2651,6 @@ input[type="button"].btn-block {
 
 .glyphicon-book:before {
   content: "\e043";
-}
-
-.glyphicon-print:before {
-  content: "\e045";
 }
 
 .glyphicon-font:before {
@@ -6960,46 +6863,6 @@ td.hidden-lg {
     display: none !important;
   }
 }
-.visible-print {
-  display: none !important;
-}
-
-tr.visible-print {
-  display: none !important;
-}
-
-th.visible-print,
-td.visible-print {
-  display: none !important;
-}
-
-@media print {
-  .visible-print {
-    display: block !important;
-  }
-
-  tr.visible-print {
-    display: table-row !important;
-  }
-
-  th.visible-print,
-  td.visible-print {
-    display: table-cell !important;
-  }
-
-  .hidden-print {
-    display: none !important;
-  }
-
-  tr.hidden-print {
-    display: none !important;
-  }
-
-  th.hidden-print,
-  td.hidden-print {
-    display: none !important;
-  }
-}
 /*
  *  Font Awesome 3.2.1
  *  the iconic font designed for Bootstrap
@@ -7617,10 +7480,6 @@ a .icon-flip-vertical:before {
 
 .icon-bookmark:before {
   content: "\f02e";
-}
-
-.icon-print:before {
-  content: "\f02f";
 }
 
 .icon-camera:before {
